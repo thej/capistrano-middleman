@@ -31,6 +31,7 @@ module Capistrano
         directory_permissions: 2775
       )
         list = Rake::FileList.new(File.join(source_directory, '**', '*'))
+        list.include "builld/.htaccess"
         list.exclude { |f| !File.file? f }
         exclude_patterns.each { |e| list.exclude e }
 

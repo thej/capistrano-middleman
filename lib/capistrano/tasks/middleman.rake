@@ -62,7 +62,7 @@ namespace :middleman do
 
   desc 'Cleaning up deploy'
   task :clean do |_t|
-    FileUtils.rm_rf build_dir
+    #FileUtils.rm_rf build_dir
     FileUtils.rm_rf Dir.glob(format('%s-%s.zip', archive_prefix, '*'))
   end
 
